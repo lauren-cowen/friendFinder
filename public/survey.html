@@ -5,8 +5,11 @@
     <title>Friend Finder Survey</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <<link rel="stylesheet" href="assets/css/style.css">
+    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
 </head>
 
@@ -20,7 +23,7 @@
                 <label for="name">Your Name (required)</label>
                 <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
                 <label for="photoImage">Link to photo image (required)</label>
-                <input type="url" class="form-control" id="nameInput" placeholder="Enter a link to your photo">
+                <input type="url" class="form-control" id="photoInput" placeholder="Enter a link to your photo">
             </div>
             <hr class="my-4">
         </form>
@@ -28,111 +31,166 @@
             <label for="question1">
                 <h3>Question 1</h3></label>
             <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-            <select multiple class="form-control" id="question1">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question1">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question2">
                 <h3> Question 2</h3></label>
             <p>Generally speaking, you rely more on your experience than your imagination</p>
-            <select multiple class="form-control" id="question2">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question2">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question3">
                 <h3>Question 3</h3></label>
             <p>You find it easy to stay relaxed and focused even when there is some pressure</p>
-            <select multiple class="form-control" id="question3">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question3">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question4">
                 <h3>Question 4</h3></label>
             <p>You rarely do something out of sheer curiousity</p>
-            <select multiple class="form-control" id="question4">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question4">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question5">
                 <h3>Question 5</h3></label>
             <p>Peoeple can rarely upset you</p>
-            <select multiple class="form-control" id="question5">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question5">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question6">
                 <h3>Question 6</h3></label>
             <p>It is often difficult for you to relate to other people's feelings</p>
-            <select multiple class="form-control" id="question6">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question6">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question7">
                 <h3>Question 7</h3></label>
             <p>In a discussion, truth should be more important than people's sensitivities</p>
-            <select multiple class="form-control" id="question7">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question7">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question8">
                 <h3>Question 8</h3></label>
             <p>You rarely get carried away by fantasies and ideas.</p>
-            <select multiple class="form-control" id="question8">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question8">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question9">
                 <h3>Question 9</h3></label>
             <p>You think that everyone's views should be respected regardless of whether they are supported by facts.</p>
-            <select multiple class="form-control" id="question9">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question9">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <label for="question10">
                 <h3>Question 10</h3></label>
             <p>You feel more energetic after spending time with a group of people</p>
-            <select multiple class="form-control" id="question10">
-                <option>1 (strongly disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (strongly agree)</option>
+            <select multiple class="form-control matchQuestion" id="question10">
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
             </select>
             <br>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
         </div>
         <hr class="my-4">
         <a href="#">Api Friends List</a>
         <span>|</span>
         <a href="https://github.com/laurenc234/friendFinder.git">GitHub Rep</a>
+
     </div>
+            <div class="modal fade" role="dialog" id="resultModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your New Best Friend!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id = "bestMatchName"></p>
+                         <p id = "bestMatchImage"> </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        var newFriend = {
+            name: $("#nameInput").val().trim(),
+            photo: $('#photoInput').val().trim(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $('#question3').val(),
+                $('#question4').val(),
+                $('#question5').val(),
+                $('#question6').val(),
+                $('#question7').val(),
+                $('#question8').val(),
+                $('#question9').val(),
+                $('#question10').val()
+            ]
+        };
+
+        $.post('/api/friends', newFriend, function(result) {
+            $('#bestMatchName').text(result.name);
+            console.log(result.photo);
+            $("#bestMatchImage").text(result.photo);
+            $("#resultModal").modal('toggle');
+        });
+    });
+
+    var showModal = function() {
+
+    }
+
+    </script>
 </body>
 
 </html>

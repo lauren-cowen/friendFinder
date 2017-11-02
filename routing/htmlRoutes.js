@@ -12,5 +12,6 @@ router.get("/survey", function(req, res) {
 });
 
 router.get('/api/friends', f.api);
+router.post('/api/friends', f.findFriend);
 
 module.exports = router;
