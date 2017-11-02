@@ -1,6 +1,6 @@
 var friends = [{
   name:"Ahmed",
-  photo:"https://commons.wikimedia.org/wiki/Main_Page#/media/File:2012-bb-jackal-1.jpg",
+  photo:"http://static.pexels.com/photos/219507/pexels-photo-219507.jpeg",
   scores:[
       5,
       1,

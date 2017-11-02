@@ -148,8 +148,8 @@
                     </div>
                     <div class="modal-body">
                         <p id = "bestMatchName"></p>
-                         <p id = "bestMatchImage"> </p>
-                         <img id = "bestMatchPic" src = "https://commons.wikimedia.org/wiki/Main_Page#/media/File:2012-bb-jackal-1.jpg">
+                        <!--  <p id = "bestMatchImage"> </p> -->
+                         <img style = "height: 250px; width: 300px" id = "bestMatchPic" src = "https://static.pexels.com/photos/632248/pexels-photo-632248.jpeg">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -182,7 +182,7 @@
         $.post('/api/friends', newFriend, function(result) {
             $('#bestMatchName').text(result.name);
             console.log(result.photo);
-            $("#bestMatchImage").text(result.photo);
+            // $("#bestMatchImage").text(result.photo);
             $("#bestMatchPic").attr("src", result.photo);
             $("#resultModal").modal('toggle');
 
